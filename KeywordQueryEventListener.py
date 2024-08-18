@@ -41,7 +41,7 @@ class KeywordQueryEventListener(EventListener):
                     icon="images/icon.png",
                     name="Write the anime name you want to search",
                     description=f"Example : {extension.preferences['keyword']} search one piece",
-                    on_enter=SetUserQueryAction(extension.preferences['keyword'] + " search "))
+                    on_enter=SetUserQueryAction(f"{extension.preferences['keyword']} search "))
             ])
 
         # When user types desired episode number

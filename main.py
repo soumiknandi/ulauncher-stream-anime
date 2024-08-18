@@ -134,7 +134,6 @@ class StreamAnime(Extension):
                 lang=self.selected_anime.language,
                 preferred_quality=quality
             )
-            print(stream)
 
             if stream is not None:
                 player.play_title(self.selected_anime, stream)

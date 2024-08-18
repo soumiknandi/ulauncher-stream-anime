@@ -67,9 +67,7 @@ class ItemEnterEventListener(EventListener):
                 if len(anime.languages) > 1:
                     output.append(ExtensionResultItem(
                         icon="images/icon.png",
-                        name=anime.name + " " +
-                        str(anime.languages).replace(
-                            '{', '(').replace('}', ')'),
+                        name=f"{anime.name} {str(anime.languages).replace('{', '(').replace('}', ')')}",
                         description="Select anime",
                         on_enter=ExtensionCustomAction({
                             "action": "select_language",
@@ -79,9 +77,7 @@ class ItemEnterEventListener(EventListener):
                 else:
                     output.append(ExtensionResultItem(
                         icon="images/icon.png",
-                        name=anime.name + " " +
-                        str(anime.languages).replace(
-                            '{', '(').replace('}', ')'),
+                        name=f"{anime.name} {str(anime.languages).replace('{', '(').replace('}', ')')}",
                         description="Select anime",
                         on_enter=ExtensionCustomAction({
                             "action": "search_episode",
@@ -204,7 +200,7 @@ class ItemEnterEventListener(EventListener):
                     icon="images/icon.png",
                     name="Open a particular episode",
                     on_enter=SetUserQueryAction(
-                        extension.preferences['keyword'] + " type episode number : ")
+                        f"{extension.preferences['keyword']} type episode number : ")
                 ))
 
         # Show prev option after 1st list
@@ -289,6 +285,9 @@ class ItemEnterEventListener(EventListener):
         extension.set_current_anime(anime)
 
         max_episode = extension.get_anime_max_episode_no()
+        
+        
+        
 
         if isinstance(max_episode, str):
             return RenderResultListAction([
@@ -310,7 +309,6 @@ class ItemEnterEventListener(EventListener):
 
         extension.set_current_anime_max_episode(max_episode)
         episode = int(anime.episode)
-
         output = []
 
         if max_episode == 1:
@@ -368,13 +366,13 @@ class ItemEnterEventListener(EventListener):
                 )
 
             # Any episode
-            if episode != 1:
+            if max_episode != 1:
                 output.append(
                     ExtensionSmallResultItem(
                         icon="images/icon.png",
                         name="Open a particular episode",
                         on_enter=SetUserQueryAction(
-                            extension.preferences['keyword'] + " type episode number : ")
+                            f"{extension.preferences['keyword']} type episode number : ")
                     )
                 )
 
