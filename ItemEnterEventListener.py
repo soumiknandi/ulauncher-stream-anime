@@ -186,12 +186,8 @@ class ItemEnterEventListener(EventListener):
 
         # Open anime ep 1 if only 1 ep is present
         if max_episode == 1:
-            extension.open_episode_in_player(
-                1,
-                extension.preferences['player_path'],
-                extension.preferences['video_quality']
-            )
-            return None
+            data["episode"] = 1
+            return self.open_episode(data, extension)
 
         # Show episode manual entry if its more than 1
         if max_episode > 1:
