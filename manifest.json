@@ -1,0 +1,76 @@
+{
+    "required_api_version": "2",
+    "name": "Stream Anime",
+    "description": "A simple extension for anime lovers to stream anime directly from Ulauncher, keeping track of their watch history, allowing them to easily continue watching the next episode.",
+    "developer_name": "Soumik Nandi",
+    "icon": "images/icon.png",
+    "options": {
+        "query_debounce": 0.1
+    },
+    "preferences": [
+        {
+            "id": "keyword",
+            "type": "keyword",
+            "name": "Stream Anime",
+            "description": "Stream anime directly from ulauncher",
+            "default_value": "anime"
+        },
+        {
+            "id": "provider",
+            "type": "select",
+            "name": "Select the provider",
+            "description": "Default - Gogo Anime, Supported providers: Gogo Anime, Yugen Anime",
+            "default_value": "gogoanime",
+            "options": [
+                {
+                    "text": "Gogo Anime",
+                    "value": "gogoanime"
+                },
+                {
+                    "text": "Yugen Anime",
+                    "value": "yugenanime"
+                }
+            ]
+        },
+        {
+            "id": "video_quality",
+            "type": "select",
+            "name": "Select video quality",
+            "description": "Highest quality will stream the highest quality avaiable, Lowest Quality will stream the lowest quality avaiable",
+            "default_value": "best",
+            "options": [
+                {
+                    "text": "Highest Quality",
+                    "value": "best"
+                },
+                {
+                    "text": "Lowest Quality",
+                    "value": "worst"
+                },
+                {
+                    "text": "1080p",
+                    "value": "1080"
+                },
+                {
+                    "text": "720p",
+                    "value": "720"
+                },
+                {
+                    "text": "480p",
+                    "value": "480"
+                },
+                {
+                    "text": "360p",
+                    "value": "360"
+                }
+            ]
+        },
+        {
+            "id": "player_path",
+            "type": "input",
+            "name": "Enter player path",
+            "description": "Default - MPV, Supported video players: MPV, MPVnet, VLC, Syncplay, IINA",
+            "default_value": "mpv"
+        }
+    ]
+}
