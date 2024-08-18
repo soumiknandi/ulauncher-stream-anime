@@ -14,7 +14,7 @@
  
 ## Requirements
 - Install any of the supported player :
-  - [Mpv](https://mpv.io) (Recomended)
+  - [Mpv](https://mpv.io) (Recommended)
   - [VLC](https://www.videolan.org/)
   - [Syncplay](https://syncplay.pl)
 - Python  package `anipy-cli` to install: ```pip install anipy-cli```
@@ -23,9 +23,9 @@
 - Open `Ulauncher` go to `Extensions` > `Add extension` and paste ```https://github.com/soumiknandi/ulauncher-stream-anime/```
 
 ## Configuration
-- Update the `keyword`, `player`, `video quality` and `anime provider` from ulauncher extension settings. ![Configuration](https://github.com/user-attachments/assets/adf71496-6f6d-4aa8-abb2-514d4e4aaf1c)
+- Update the `keyword`, `player`, `video quality` and `anime provider` from ulauncher extension settings according to your preferences. ![Configuration](https://github.com/user-attachments/assets/adf71496-6f6d-4aa8-abb2-514d4e4aaf1c)
 
-- If video is loading slowly or not opening at all try changing the provider
+- If video is loading slowly or not opening at all try changing the `anime provider` and `video quality`.
 
 ## License
 This project is licensed under the terms of the GNU General Public License v3.0. See the [LICENSE](./LICENSE) file for details.
@@ -35,7 +35,6 @@ This project is licensed under the terms of the GNU General Public License v3.0.
 - [Flaticon](https://www.flaticon.com/free-icon/face_15427945) for the icon.
 
 ## Contact
-
 For any questions or suggestions, feel free to open an issue or contact me at [official.soumik.nandi@gmail.com](mailto:official.soumik.nandi@gmail.com).
 
 ---
