@@ -20,7 +20,7 @@
 - Python  package `anipy-cli` to install: ```pip install anipy-cli```
 
 ## Installation
-- Open `Ulauncher` go to `Extensions` > `Add extension` and paste ```https://github.com/soumiknandi```
+- Open `Ulauncher` go to `Extensions` > `Add extension` and paste ```https://github.com/soumiknandi/ulauncher-stream-anime/```
 
 ## Configuration
 - Update the `keyword`, `player`, `video quality` and `anime provider` from ulauncher extension settings. ![Configuration](https://github.com/user-attachments/assets/adf71496-6f6d-4aa8-abb2-514d4e4aaf1c)
