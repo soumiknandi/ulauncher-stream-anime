@@ -5,7 +5,7 @@
 <h1 align="center">Stream Anime</h1>
 
 [![License - GPL3](https://img.shields.io/badge/License-GPL3-2ea44f)](./LICENSE)
-[![Ulauncher - Extension](https://img.shields.io/badge/Ulauncher-Extension-2ea44f)](https://xt.ulauncher.io/-/)
+[![Ulauncher - Extension](https://img.shields.io/badge/Ulauncher-Extension-2ea44f)](https://ext.ulauncher.io/-/github-soumiknandi-ulauncher-stream-anime)
 
 `Stream Anime` is a [ULauncher](https://ulauncher.io/) extension to stream anime directly from [ULauncher](https://ulauncher.io/), keeping track of their watch history, allowing them to easily continue watching the next episode.
 
