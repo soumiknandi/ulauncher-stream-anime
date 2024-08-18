@@ -40,10 +40,8 @@ class KeywordQueryEventListener(EventListener):
                 ExtensionResultItem(
                     icon="images/icon.png",
                     name="Write the anime name you want to search",
-                    description="Example : " +
-                    extension.preferences['keyword'] + " search one piece",
-                    on_enter=SetUserQueryAction(
-                        extension.preferences['keyword'] + " search "))
+                    description=f"Example : {extension.preferences['keyword']} search one piece",
+                    on_enter=SetUserQueryAction(extension.preferences['keyword'] + " search "))
             ])
 
         # When user types desired episode number
@@ -56,7 +54,7 @@ class KeywordQueryEventListener(EventListener):
             return RenderResultListAction([
                 ExtensionResultItem(
                     icon="images/icon.png",
-                    name=f"Open {anime.name} episode : " + episode,
+                    name=f"Open {anime.name} episode : {episode}",
                     description="Press enter to open episode",
                     on_enter=ExtensionCustomAction(
                         {
@@ -106,18 +104,14 @@ class KeywordQueryEventListener(EventListener):
                         ExtensionSmallResultItem(
                             icon="images/icon.png",
                             name="Previous page",
-                            on_enter=SetUserQueryAction(
-                                f'{extension.preferences['keyword']} history page {
-                                    page - 1}'
-                            ))
+                            on_enter=SetUserQueryAction(f'{extension.preferences["keyword"]} history page {page - 1}'))
                     )
 
                 for anime in anime_history:
                     output.append(
                         ExtensionSmallResultItem(
                             icon="images/icon.png",
-                            name=f"{anime.name} ({anime.language}) ({
-                                anime.provider})",
+                            name=f"{anime.name} ({anime.language}) ({anime.provider})",
                             on_enter=ExtensionCustomAction({
                                 "action": "open_anime_history",
                                 "anime": anime,
@@ -143,8 +137,7 @@ class KeywordQueryEventListener(EventListener):
                             icon="images/icon.png",
                             name="Next page",
                             on_enter=SetUserQueryAction(
-                                f'{extension.preferences['keyword']} history page {
-                                    page+1}'
+                                f"{extension.preferences['keyword']} history page {page+1}"
                             ))
                     )
 
@@ -164,7 +157,7 @@ class KeywordQueryEventListener(EventListener):
                 icon="images/icon.png",
                 name="Search anime",
                 description="Find anime by name",
-                on_enter=SetUserQueryAction(extension.preferences['keyword'] + " search "))
+                on_enter=SetUserQueryAction(f"{extension.preferences['keyword']} search "))
         )
 
         # Show anime history option
@@ -173,7 +166,7 @@ class KeywordQueryEventListener(EventListener):
                 icon="images/icon.png",
                 name="Watch history",
                 description="View your watch history",
-                on_enter=SetUserQueryAction(extension.preferences['keyword'] + " history"))
+                on_enter=SetUserQueryAction(f"{extension.preferences['keyword']} history"))
         )
 
         # Show continue last watched anime option
@@ -182,10 +175,8 @@ class KeywordQueryEventListener(EventListener):
             output.append(
                 ExtensionResultItem(
                     icon="images/icon.png",
-                    name=f"Continue watching {
-                        last_anime.name} ({last_anime.language})",
-                    description="Open " + last_anime.name + " next episode : " +
-                    str(int(last_anime.episode) + 1),
+                    name=f"Continue watching {last_anime.name} ({last_anime.language})",
+                    description=f"Open {last_anime.name} next episode : {str(int(last_anime.episode) + 1)}",
                     on_enter=ExtensionCustomAction({
                         "action": "open_episode_direcly",
                         "anime": last_anime,
