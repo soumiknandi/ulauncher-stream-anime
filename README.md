@@ -4,7 +4,7 @@
 
 <h1 align="center">Stream Anime</h1>
 
-[![License - GPL3](https://img.shields.io/badge/License-GPL3-2ea44f)](./LICENSE)
+[![License - GPL3](https://img.shields.io/badge/License-GPL3-2ea44f)](./LICENSE.md)
 [![Ulauncher - Extension](https://img.shields.io/badge/Ulauncher-Extension-2ea44f)](https://ext.ulauncher.io/-/github-soumiknandi-ulauncher-stream-anime)
 
 `Stream Anime` is a [ULauncher](https://ulauncher.io/) extension to stream anime directly from [ULauncher](https://ulauncher.io/), keeping track of their watch history, allowing them to easily continue watching the next episode.
@@ -28,7 +28,7 @@
 - If video is loading slowly or not opening at all try changing the `anime provider` and `video quality`.
 
 ## License
-This project is licensed under the terms of the GNU General Public License v3.0. See the [LICENSE](./LICENSE) file for details.
+This project is licensed under the terms of the GNU General Public License v3.0. See the [LICENSE](./LICENSE.md) file for details.
 
 ## Acknowledgements
 - [Anipy](https://github.com/sdaqo/anipy-clianipy) for their great API.
