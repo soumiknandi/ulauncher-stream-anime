@@ -10,7 +10,7 @@
 `Stream Anime` is a [ULauncher](https://ulauncher.io/) extension to stream anime directly from [ULauncher](https://ulauncher.io/), keeping track of their watch history, allowing them to easily continue watching the next episode.
 
 ## Demo
-
+![Demo](https://github.com/user-attachments/assets/510fc413-b578-4734-a2de-b1f61f69cfbd)
  
 ## Requirements
 - Install any of the supported player :
@@ -23,7 +23,8 @@
 - Open `Ulauncher` go to `Extensions` > `Add extension` and paste ```https://github.com/soumiknandi```
 
 ## Configuration
-- Update the `keyword`, `player`, `video quality` and `anime provider` from ulauncher extension settings.
+- Update the `keyword`, `player`, `video quality` and `anime provider` from ulauncher extension settings. ![Configuration](https://github.com/user-attachments/assets/adf71496-6f6d-4aa8-abb2-514d4e4aaf1c)
+
 - If video is loading slowly or not opening at all try changing the provider
 
 ## License
