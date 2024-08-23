@@ -17,7 +17,7 @@
   - [Mpv](https://mpv.io) (Recommended)
   - [VLC](https://www.videolan.org/)
   - [Syncplay](https://syncplay.pl)
-- Python  package `anipy-cli` to install: ```pip install anipy-cli```
+- Python  package `anipy-api` to install: ```pip install anipy-api```
 
 ## Installation
 - Open `Ulauncher` go to `Extensions` > `Add extension` and paste ```https://github.com/soumiknandi/ulauncher-stream-anime/```
