@@ -152,7 +152,6 @@ class ItemEnterEventListener(EventListener):
         # Initial settings
         if list_start == -1 and list_end == -1:
             list_start = 1
-            list_end = 16
 
             anime.language = data["language"]
             extension.set_current_anime(anime)
@@ -177,6 +176,7 @@ class ItemEnterEventListener(EventListener):
                         description="Please search again",
                         on_enter=DoNothingAction())
                 ])
+            list_end = 16 if max_episode > 15 else max_episode + 1
 
             extension.set_current_anime_max_episode(max_episode)
         else:
@@ -200,7 +200,7 @@ class ItemEnterEventListener(EventListener):
                 ))
 
         # Show prev option after 1st list
-        if list_start != 1:
+        if list_start > 1:
             output.append(
                 ExtensionSmallResultItem(
                     icon="images/icon.png",
@@ -210,6 +210,19 @@ class ItemEnterEventListener(EventListener):
                         "anime": anime,
                         "list_start": list_start - 15,
                         "list_end": list_start
+                    }, keep_app_open=True)
+                ))
+
+        elif list_start == 1 and max_episode > list_end - 1:
+            output.append(
+                ExtensionSmallResultItem(
+                    icon="images/icon.png",
+                    name="Last Episodes",
+                    on_enter=ExtensionCustomAction({
+                        "action": "search_episode",
+                        "anime": anime,
+                        "list_start": (int(max_episode/15)*15)+1,
+                        "list_end": max_episode + 1
                     }, keep_app_open=True)
                 ))
 
@@ -239,6 +252,20 @@ class ItemEnterEventListener(EventListener):
                         if max_episode >= list_end + 15 else max_episode + 1
                     }, keep_app_open=True)
                 ))
+        elif max_episode > 15:
+            output.append(
+                ExtensionSmallResultItem(
+                    icon="images/icon.png",
+                    name="First Episodes",
+                    on_enter=ExtensionCustomAction({
+                        "action": "search_episode",
+                        "anime": anime,
+                        "list_start": 1,
+                        "list_end": 16 if max_episode > 15 else max_episode + 1
+                        if max_episode >= list_end + 15 else max_episode + 1
+                    }, keep_app_open=True)
+                ))
+            
         return RenderResultListAction(output)
 
     def open_episode(self, data, extension):
@@ -281,9 +308,6 @@ class ItemEnterEventListener(EventListener):
         extension.set_current_anime(anime)
 
         max_episode = extension.get_anime_max_episode_no()
-        
-        
-        
 
         if isinstance(max_episode, str):
             return RenderResultListAction([
